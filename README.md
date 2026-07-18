@@ -38,10 +38,27 @@ This project demonstrates how a React frontend communicates with a Go backend to
 
 ## Getting Started
 
-Install dependencies and start the development environment:
+### Using Docker (Recommended)
 
 ```bash
 docker compose -f docker-compose.dev.yaml up --build
+```
+
+### Without Docker
+
+Start the backend:
+
+```bash
+cd Server/MagicStreamServer
+go run main.go
+```
+
+Start the frontend:
+
+```bash
+cd Client/magic-stream-client
+npm install
+npm run dev
 ```
 
 ## Purpose
