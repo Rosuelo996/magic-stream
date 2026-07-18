@@ -1,0 +1,17 @@
+services:
+  web:
+    #image: rosuelo996/magic-stream-web-prod:1.0.0
+    image: rosuelo996/magic-stream-web-prod:${IMAGE_TAG:-latest}
+    container_name: magic-stream-web-prod
+
+    ports:
+      - "8081:80"
+
+    restart: always
+
+  api:
+    #image: rosuelo996/magic-stream-api-prod:1.0.0
+    image: rosuelo996/magic-stream-api-prod:${IMAGE_TAG:-latest}
+    container_name: magic-stream-api-prod
+
+    restart: always
